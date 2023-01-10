@@ -64,6 +64,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디 찾기"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 찾기"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:layout_weight="1"
+                android:paddingEnd="8dp"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginTop="30dp"
@@ -89,30 +116,36 @@
                 android:background="#cc777777"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/Signin1"
+        <ImageView
+            android:id="@+id/KakaoSignin"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginBottom="10dp"
+            android:text="카카오"
+            android:onClick="@{()->LoginViewModel.KakaoSignup()}"
+            android:background="@drawable/kakao_login_large_wide"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/NaverSignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="파이어베이스 데이터 추가"
-            android:onClick="@{()->LoginViewModel.Login2()}"/>
-        <Button
-            android:id="@+id/Signin2"
+            android:text="네이버 로그인"
+            android:onClick="@{()->LoginViewModel.NaverLogin()}"
+            android:background="@drawable/naver_login_btn_back" />
+        <ImageView
+            android:id="@+id/GoogleSignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="파이어베이스 데이터 읽기"/>
+            android:text="구글"
+            android:onClick="@{()->LoginViewModel.GoogleSignin()}"/>
         <Button
-            android:id="@+id/Signin3"
+            android:id="@+id/MainSignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="구글"/>
-        <Button
-            android:id="@+id/Signin4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="이 어플 회원가입"/>
+            android:text="이 어플 회원가입"
+            android:onClick="@{()->LoginViewModel.MainSignin()}"/>
 
     </LinearLayout>
 </layout>

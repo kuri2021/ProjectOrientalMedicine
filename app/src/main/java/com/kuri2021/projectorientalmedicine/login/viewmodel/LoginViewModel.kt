@@ -25,7 +25,7 @@ class LoginViewModel(application: Application):AndroidViewModel(application) {
         myRef.setValue("Hello, World!2")
     }
 
-    fun Login2() {
+    fun KakaoSignup() {
 // Create a new user with a first and last name
         val user = hashMapOf(
             "first" to "Ada",
@@ -43,7 +43,7 @@ class LoginViewModel(application: Application):AndroidViewModel(application) {
                 Log.w(TAG, "Error adding document", e)
             }
     }
-    fun Login3(){
+    fun NaverLogin(){
         SettingClass.Firebasestore.collection("users")
             .get()
             .addOnSuccessListener { result ->
@@ -56,7 +56,11 @@ class LoginViewModel(application: Application):AndroidViewModel(application) {
             }
     }
 
+    fun GoogleSignin(){
 
+    }
 
+    fun MainSignin(){
 
+    }
 }

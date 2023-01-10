@@ -38,23 +38,23 @@ class LoginActivity : AppCompatActivity() {
 
 
     fun update(){
-        val myRef = SettingClass.Firebasedatabase.getReference("message")
+//        val myRef = SettingClass.Firebasedatabase.getReference("message")
+//
+//        myRef.setValue("Hello, World!")
+//
 
-        myRef.setValue("Hello, World!")
-
-
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = dataSnapshot.getValue<String>()
-                Log.d(TAG, "Value is: $value")
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException())
-            }
-        })
+//        myRef.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(dataSnapshot: DataSnapshot) {
+//                // This method is called once with the initial value and again
+//                // whenever data at this location is updated.
+//                val value = dataSnapshot.getValue<String>()
+//                Log.d(TAG, "Value is: $value")
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                // Failed to read value
+//                Log.w(TAG, "Failed to read value.", error.toException())
+//            }
+//        })
     }
 }
