@@ -13,11 +13,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".login.LoginActivity"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:paddingStart="40dp"
         android:paddingEnd="40dp">
 
+<!--        <TextView-->
+<!--            android:layout_width=""-->
+<!--            android:layout_height=""-->
+
         <ImageView
+            android:id="@+id/mainlogotest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/main_logo"/>
@@ -25,10 +30,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="로그인"
-            android:textSize="16sp"
+            android:text="LOGIN"
+            android:textSize="40sp"
             android:textStyle="bold"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"/>
+
 
         <EditText
             android:id="@+id/IdInputEdittext"
@@ -39,7 +46,7 @@
             android:paddingEnd="0dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="80dp"
             android:hint="ID"/>
         <EditText
             android:id="@+id/pwInputEdittext"
@@ -56,17 +63,21 @@
         <Button
             android:id="@+id/LoginBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:text="로그인"
             android:onClick="@{()->LoginViewModel.Login()}"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_btn"
+            android:textColor="@color/white"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/FindId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="아이디 찾기"
@@ -85,7 +96,8 @@
                 android:text="회원가입"
                 android:layout_weight="1"
                 android:paddingEnd="8dp"
-                android:gravity="right"/>
+                android:gravity="right"
+                android:onClick="@{()->LoginViewModel.MainSignin()}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -120,7 +132,7 @@
             android:id="@+id/KakaoSignin"
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:text="카카오"
             android:onClick="@{()->LoginViewModel.KakaoSignup()}"
             android:background="@drawable/kakao_login_large_wide"
@@ -128,24 +140,23 @@
         <ImageView
             android:id="@+id/NaverSignin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="5dp"
             android:text="네이버 로그인"
-            android:onClick="@{()->LoginViewModel.NaverLogin()}"
             android:background="@drawable/naver_login_btn_back" />
         <ImageView
             android:id="@+id/GoogleSignin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="5dp"
             android:text="구글"
             android:onClick="@{()->LoginViewModel.GoogleSignin()}"/>
-        <Button
-            android:id="@+id/MainSignin"
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/testtext"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이 어플 회원가입"
-            android:onClick="@{()->LoginViewModel.MainSignin()}"/>
+            android:text="test"/>
 
     </LinearLayout>
 </layout>

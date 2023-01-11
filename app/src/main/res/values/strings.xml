@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ProjectOrientalMedicine</string>
+
+    <string name="Kakao_NATIVE_APP_KEY">880360ece6dadad7bf06bdc462fd8ef3</string>
 </resources>
